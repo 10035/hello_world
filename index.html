@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello_world</title>
+    <link rel="icon" type="image/png" href="world.png">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+        }
+        .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4b30c4;
+            text-decoration: none;
+        }
+        .message-container {
+            position: fixed;
+            top: 350px; 
+            left: 50%;
+            transform: translateX(-50%); 
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+        
+        p {
+            font-size: 20px;
+            color: #4b30c4;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="brand">hello_world</a>
+    </nav>
+    <div class="button-container">
+        <button>Ship it</button>
+    </div>
+    <div class="message-container">
+        <p></p>
+    </div>
+    <script>
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+        button.addEventListener('click', () => {
+            p.textContent = '<hello_world> 🚀';
+            setTimeout(() => {
+                p.textContent = '';
+            }, 3000);
+        })
+    </script>
+</body>
+</html>
+
